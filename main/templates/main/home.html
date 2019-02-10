@@ -1,0 +1,18 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+	Home
+{% endblock %}
+
+{% block body %}
+	<hr>
+	<h1 style="color:blue" align="center">Welcome to Image Interpretation</h1>
+	<hr>
+	<p align="center" style="font-size: 140%">
+		Do you want to see how the machine understands our images?
+	</p>
+	<div class="gap-30"></div>
+	<div class="right" style="font-size: 160%; font-weight: bold">
+		<a href="{% url 'upload'%}"> Begin Here. </a>
+	</div>
+{% endblock %}

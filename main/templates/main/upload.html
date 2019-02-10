@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+	Image Interpretation
+{% endblock %}
+
+{% block body %}
+	<div class="gap-30"></div>
+	<h1 align="center">Upload Your Picture</h1>	
+	<div class="gap-30"></div>
+	<div align="center">
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<input type="file" name="document">
+			<button type="submit">Upload</button>
+		</form>
+	</div>
+	{%if url%}
+		<p>File is uploaded at:  <a href="{{url}}">{{url}}</a></p>
+	{%endif%}
+	<div class="gap-30"></div>
+	<div class="right">
+		<a href="{% url 'home' %}"> Return to Home </a>
+	</div>
+{% endblock %}
