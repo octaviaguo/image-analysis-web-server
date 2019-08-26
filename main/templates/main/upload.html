@@ -17,6 +17,9 @@
 	</div>
 	{%if url%}
 		<p>File is uploaded at:  <a href="{{url}}">{{url}}</a></p>
+		<div class="right" style="font-size: 160%; font-weight: bold">
+			<a href="{% url 'process_img'%}"> Classification </a>
+		</div>
 	{%endif%}
 	<div class="gap-30"></div>
 	<div class="right">
